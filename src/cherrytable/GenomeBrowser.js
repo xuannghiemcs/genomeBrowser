@@ -130,7 +130,7 @@ this.state.genomeBrowserButton[num] = 0;
 }
 
 }
-console.log("hello", this.state.genomeBrowserButton);
+
     this.setState({});
 
 
@@ -612,7 +612,7 @@ this.state.defaultDivingLength = totalDividingSection;
 
                   function parseText(e){
 
-  console.log(e, "e");
+
 
   return;
 

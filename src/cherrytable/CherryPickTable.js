@@ -599,6 +599,7 @@ this.state.s = nextProps.searchValue;
 
               this.state.SearchAllBarValues1[
                 this.state.currentCherrySearchMenu]["value"][num] = e.target.value;
+
                 this.setState({currentPage:0, trueSearchData: 1});
 
               }
@@ -927,8 +928,9 @@ this.state.defaultChr[this.state.currentCherrySearchMenu][this.state.SearchBarBr
 
                           var indexRowData = generateSearchedData(this.state.tabledata,
                             tablekey,
-                          this.state.s,
-                            this.state.SearchBarValues[this.state.currentCherrySearchMenu]);
+                            this.state.SearchAllBarValues1[
+                                this.state.currentCherrySearchMenu]["value"],
+                            this.state.SearchBarValues[this.state.currentCherrySearchMenu], this.state.currentRow[this.state.currentCherrySearchMenu]);
                             this.state.trueSearchData = 0;
                             this.state.savedSearchData = indexRowData;
                           } else {
