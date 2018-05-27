@@ -1,0 +1,184 @@
+.Cherry {
+  text-align: center;
+
+}
+
+table {
+    width:100%;
+}
+table, th {
+    border-bottom: 2px solid #C8C8C8;
+    border-collapse: collapse;
+}
+
+table, td {
+    border-bottom: 2px solid #E0E0E0;
+    border-collapse: collapse;
+}
+
+tr.tr-hover-class:hover {
+   background: #EAECEE;
+}
+
+tr.tr-hover-class:active {
+   background: yellow;
+}
+
+tr.tr-onClick-class {
+   background: yellow;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+input.cherryBarRed {
+  border: 5px solid;
+  border-color: red;
+  outline-color: black;
+}
+
+input.cherryBarGreen {
+  border: 5px solid;
+  border-color: green;
+  outline-color: black;
+}
+
+input.cherryBarBrown {
+  border: 5px solid;
+  border-color: brown;
+  outline-color: black;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.highlightpagination a.active {
+    background-color: yellow;
+    color: white;
+}
+
+.highlightBrownpagination a.active {
+    background-color: brown;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+.gray {
+    color: #A8A8A8;
+}
+
+.yellow {
+    color: yellow;
+}
+
+rect.genomeBrowserBoard{
+    width: 100%;
+
+    fill:white;
+    stroke:#C8C8C8;
+    stroke-width:.5px;
+}
+
+rect#genomeBrowserButtonOnHoverstrip:hover {
+opacity: .1;
+    fill:green;
+    stroke:black;
+    stroke-width:.1px;
+}
+
+
+rect#genomeBrowserButtonOnHover:hover {
+
+    fill:green;
+    stroke:black;
+    stroke-width:.1px;
+}
+
+rect.genomeBrowserButton{
+    width: 1.4px;
+    fill:gray;
+    stroke:black;
+    stroke-width:.1px;
+}
+
+rect.genomeBrowserRedButton{
+    width: 1.4px;
+    fill:red;
+    stroke:black;
+    stroke-width:.1px;
+}
+
+rect.genomeBrowserRedButton:hover{
+
+      fill:orange;
+      stroke:black;
+      stroke-width:.1px;
+}
+
+rect.genomeBrowserButtonStrip{
+    width: 100%;
+    fill:gray;
+    opacity:0;
+    stroke:black;
+    stroke-width:.1px;
+}
+
+rect.genomeBrowserButton:hover{
+
+      fill:green;
+      stroke:black;
+      stroke-width:.1px;
+}
+
+rect.genomeBrowserButtonStrip:hover{
+    width: 100%;
+    fill:gray;
+    opacity:.1;
+    stroke:black;
+    stroke-width:.1px;
+}
+
+
+div.genome{
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+}
+
+g.genomeBoard{
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+line.ruler:hover{
+
+      fill:blue;
+      stroke:blue;
+      stroke-width:.5px;
+}
+
+line.ruler{
+  opacity:.1;
+      fill:white;
+      stroke:white;
+
+}
