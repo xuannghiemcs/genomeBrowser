@@ -13,11 +13,13 @@ export function searchAllVal(arraySearchValue, data, key, s, defaultchr){
     var count = 0;
     var foundCount = 0;
     var countEmpty = 0;
-
+var countMissing = 0;
     for(var m = 0; m < sLength; m++){
 
 
       if(isNumber(defaultchr[m])){
+countMissing++;
+
         continue;
       }
 
@@ -64,7 +66,7 @@ export function searchAllVal(arraySearchValue, data, key, s, defaultchr){
     }
 
 
-    if(countEmpty == s.length){
+    if(countEmpty == s.length - countMissing){
       return -1;
     }
     if(foundCount/count == 1.0){
