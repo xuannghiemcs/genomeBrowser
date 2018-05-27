@@ -169,7 +169,7 @@ rowData: '',
 
         ],
             toggleAccesionSearch: 0,
-            s: '',
+
         };
 
 
@@ -213,7 +213,7 @@ rowData: '',
         }
 
   componentWillReceiveProps(nextProps) {
-this.state.s = nextProps.searchValue;
+
       this.setState({trueSearchData: 1});
 
   }

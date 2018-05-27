@@ -23,7 +23,7 @@ class App extends Component {
 
     // save the users in the state
     this.state = {
-      patInfoKey: [{key:'radio', title: "", headRender: (event) => {return (<input type="search" size = "6" onChange = {(event) =>{this.handlesearchChanges(event)}}/>)}, render: (data) => {return (<input type="radio" name= 'test' id = 'test' value = {data.id}/>)}},
+      patInfoKey: [{key:'radio', title: "", render: (data) => {return (<input type="radio" name= 'test' id = 'test' value = {data.id}/>)}},
       {key:'accession', title: "accession"},
       {key:'chrom', title:"chr"},
       {key:'start', title:"start"},
@@ -35,18 +35,11 @@ class App extends Component {
     };
 
 
-this.handlesearchChanges = this.handlesearchChanges.bind(this);
 
   }
 
 
-handlesearchChanges(e){
 
-
-searchValue = e.target.value;
-      this.setState({ });
-
-}
 
 
   render() {
@@ -61,7 +54,7 @@ searchValue = e.target.value;
       <CherryPickTable
       tabledata = {product}
       tablekey = {this.state.patInfoKey}
-      searchValue = {searchValue}
+
       />
       </div>
     );
