@@ -809,35 +809,81 @@ undefined,undefined,undefined,undefined,undefined];
                     var genomeBrowser = undefined;
                     var currentRow = this.state.currentRow[this.state.currentCherrySearchMenu][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]];
 
-                    if(currentRow || currentRow == 0){
-                      if(this.state.NumSearchBars == 0){
-                        this.state.NumSearchBars = 1;
-                        this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][0] = this.state.rowData["accession"];
-                      } else if(this.state.rowData !== ''){
-
-                        if(this.state.toggleAccesionSearch == 1){
-                          this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu] = (this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu] + 1.0) % (this.state.NumAllSearchBars[this.state.currentCherrySearchMenu] );
-                          this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.rowData["accession"];
-
-                        }else{
-                          this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.rowData["accession"];
-                        }
-
-
-                      }
 
 
 
-                    genomeBrowser = (<GenomeBrowserData currentRow = {currentRow}
-                      data = {this.state.tabledata[currentRow]}
-                    defaultChr = {        this.state.defaultChr[this.state.currentCherrySearchMenu][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]]}
-                    currentCherrySearchMenu = {this.state.currentCherrySearchMenu}
-                    currentSearchAllHighlight = {this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]}
-                      />);
+  if(currentRow || currentRow == 0){
+
+    if(this.state.savedSearchData){
+
+
+var currentRow = this.state.savedSearchData[currentRow];
+
+
+if(this.state.NumSearchBars == 0){
+  this.state.NumSearchBars = 1;
+  this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][0] = this.state.tabledata[currentRow]["accession"];
+} else if(this.state.tabledata[currentRow] !== ''){
+
+  if(this.state.toggleAccesionSearch == 1){
+    this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu] = (this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu] + 1.0) % (this.state.NumAllSearchBars[this.state.currentCherrySearchMenu] );
+    this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.tabledata[currentRow]["accession"];
+
+  }else{
+    this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.tabledata[currentRow]["accession"];
+  }
+
+
+}
+
+
+genomeBrowser = (<GenomeBrowserData currentRow = {currentRow}
+  data = {this.state.tabledata[currentRow]}
+defaultChr = {        this.state.defaultChr[this.state.currentCherrySearchMenu][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]]}
+currentCherrySearchMenu = {this.state.currentCherrySearchMenu}
+currentSearchAllHighlight = {this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]}
+  />);
 
 this.state.defaultChr[this.state.currentCherrySearchMenu][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.tabledata[currentRow]["chrom"];
 
-                    }
+} else {
+  if(this.state.NumSearchBars == 0){
+    this.state.NumSearchBars = 1;
+    this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][0] = this.state.rowData["accession"];
+  } else if(this.state.rowData !== ''){
+
+    if(this.state.toggleAccesionSearch == 1){
+      this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu] = (this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu] + 1.0) % (this.state.NumAllSearchBars[this.state.currentCherrySearchMenu] );
+      this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.rowData["accession"];
+
+    }else{
+      this.state.SearchAllBarValues1[this.state.currentCherrySearchMenu]['value'][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.rowData["accession"];
+    }
+
+
+  }
+
+  genomeBrowser = (<GenomeBrowserData currentRow = {currentRow}
+    data = {this.state.tabledata[currentRow]}
+  defaultChr = {        this.state.defaultChr[this.state.currentCherrySearchMenu][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]]}
+  currentCherrySearchMenu = {this.state.currentCherrySearchMenu}
+  currentSearchAllHighlight = {this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]}
+    />);
+
+this.state.defaultChr[this.state.currentCherrySearchMenu][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]] = this.state.tabledata[currentRow]["chrom"];
+
+}
+
+
+
+  }
+
+
+
+
+  var currentRow = this.state.currentRow[this.state.currentCherrySearchMenu][this.state.SearchBarBrownHighlight[this.state.currentCherrySearchMenu]];
+
+
 
 
                     var col = [];
