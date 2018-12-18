@@ -819,6 +819,7 @@ undefined,undefined,undefined,undefined,undefined];
 
 var currentRow = this.state.savedSearchData[currentRow];
 
+      
 
 if(this.state.NumSearchBars == 0){
   this.state.NumSearchBars = 1;
